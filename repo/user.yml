@@ -1,4 +1,11 @@
+server:
+  port: 8763
 spring:
+  messages:
+    basename: i18n/messages
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
@@ -27,5 +34,16 @@ spring:
     multipart:
       max-file-size: 20MB
       max-request-size: 100MB
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml,mapper/*.xml
+  type-aliases-package: com.scott.neptune
+  check-config-location: true
 mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.scott.neptune
+  global-config:
+    db-column-underline: false
+  configuration:
+    map-underscore-to-camel-case: false
+    cache-enabled: false
   pageSize: 30
