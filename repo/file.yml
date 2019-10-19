@@ -28,3 +28,6 @@ folders:
   userAvatarMd: /userAvatar/md
   postImageSm: /post/sm
   postImageOrigin: /post/origin
+logging:
+  level:
+    org.springframework.cloud.netflix.feign: debug

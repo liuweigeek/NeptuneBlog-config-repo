@@ -53,3 +53,6 @@ mybatis-plus:
     map-underscore-to-camel-case: false
     cache-enabled: false
   pageSize: 30
+logging:
+  level:
+    org.springframework.cloud.netflix.feign: debug
