@@ -61,4 +61,4 @@ ribbon:
     clients: user
 logging:
   level:
-    org.springframework.cloud.netflix.openfeign: debug
+    org.springframework.cloud.openfeign: debug

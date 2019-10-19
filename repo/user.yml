@@ -55,4 +55,4 @@ mybatis-plus:
   pageSize: 30
 logging:
   level:
-    org.springframework.cloud.netflix.openfeign: debug
+    org.springframework.cloud.openfeign: debug
