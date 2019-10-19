@@ -1,8 +1,6 @@
 server:
   port: 8080
 spring:
-  application:
-    name: @project.name@
   messages:
     basename: i18n/messages
   redis:
@@ -16,18 +14,17 @@ spring:
         max-wait: -1
         max-idle: 8
         min-idle: 0
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: scott
+    password: 12345678
 zuul:
   #  sensitiveHeaders: "*"
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
     connection-request-timeout-millis: 20000
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    prefer-ip-address: true
 hystrix:
   command:
     default:
