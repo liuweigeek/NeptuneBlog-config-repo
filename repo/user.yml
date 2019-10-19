@@ -51,4 +51,4 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false
     cache-enabled: false
-  pageSize: 30
+  pageSize: 31
