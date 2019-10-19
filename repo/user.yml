@@ -52,4 +52,4 @@ mybatis-plus:
     map-underscore-to-camel-case: false
     cache-enabled: false
   pageSize: 30
-test-label: Hello,Scott! Hello, Neptune!
+test-label: Hello,Scott! You guys rock!
