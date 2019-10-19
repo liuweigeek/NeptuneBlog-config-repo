@@ -51,4 +51,5 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false
     cache-enabled: false
-  pageSize: 31
+  pageSize: 30
+test-label: Hello,World!
