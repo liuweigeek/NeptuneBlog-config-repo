@@ -53,6 +53,23 @@ mybatis-plus:
     map-underscore-to-camel-case: false
     cache-enabled: false
   pageSize: 30
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 20000
+  shareSecurityContext: true
+ribbon:
+  ReadTimeout: 20000
+  eager-load:
+    enabled: true
+    clients: post, file
 logging:
   level:
     org.springframework.cloud.openfeign: debug
