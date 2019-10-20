@@ -53,6 +53,6 @@ mybatis-plus:
     map-underscore-to-camel-case: false
     cache-enabled: false
   pageSize: 30
-#logging:
-#  level:
-#    org.springframework.cloud.openfeign: debug
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
