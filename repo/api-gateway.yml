@@ -44,8 +44,8 @@ hystrix:
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
-logging:
-  level:
-    org.springframework.cloud.openfeign: debug
+#logging:
+#  level:
+#    org.springframework.cloud.openfeign: debug
 loginFilter:
   ignoreUris: /user/user/login, /user/user/register
