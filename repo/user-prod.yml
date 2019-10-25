@@ -15,7 +15,7 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
   redis:
-    host: 127.0.0.1
+    host: localhost
     port: 6379
     database: 0
     timeout: 20000

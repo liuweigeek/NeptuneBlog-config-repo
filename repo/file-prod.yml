@@ -14,7 +14,7 @@ spring:
     sampler:
       probability: 0
 minio:
-  endpoint: http://127.0.0.1:9000
+  endpoint: http://localhost:9000
   access-key: scott
   secret-key: 12345678
   bucket: neptune-blog
