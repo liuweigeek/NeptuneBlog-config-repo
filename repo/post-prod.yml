@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://serverhost:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
     username: scott
     password: 12345678
     hikari:
@@ -15,7 +15,7 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
   rabbitmq:
-    host: localhost
+    host: serverhost
     port: 5672
     username: scott
     password: 12345678

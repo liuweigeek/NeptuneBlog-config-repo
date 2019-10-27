@@ -6,7 +6,7 @@ spring:
       max-file-size: 20MB
       max-request-size: 50MB
   redis:
-    host: localhost
+    host: serverhost
     port: 6379
     database: 0
     timeout: 20000
@@ -17,7 +17,7 @@ spring:
         max-idle: 8
         min-idle: 0
   rabbitmq:
-    host: localhost
+    host: serverhost
     port: 5672
     username: scott
     password: 12345678
