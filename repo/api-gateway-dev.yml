@@ -50,3 +50,8 @@ logging:
     org.springframework.cloud.bus: debug
 loginFilter:
   ignoreUris: /user/user/login, /user/user/register
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
