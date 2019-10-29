@@ -34,8 +34,10 @@ hystrix:
   command:
     default:
       execution:
-        timeout:
-          enable: false
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 20000
   shareSecurityContext: true
 ribbon:
   ReadTimeout: 20000
