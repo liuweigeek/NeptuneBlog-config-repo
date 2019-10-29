@@ -18,12 +18,42 @@ minio:
   access-key: scott
   secret-key: 12345678
   bucket: neptune-blog
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 20000
+  shareSecurityContext: true
+ribbon:
+  ReadTimeout: 20000
+  eager-load:
+    enabled: true
+    clients: user, file
+logging:
+  level:
+    org.springframework.cloud.openfeign: error
+    org.springframework.cloud.bus: error
 folders:
   userAvatarSm: /userAvatar/sm
   userAvatarMd: /userAvatar/md
   postImageSm: /post/sm
   postImageOrigin: /post/origin
-logging:
-  level:
-    org.springframework.cloud.openfeign: error
-    org.springframework.cloud.bus: error
+file:
+  avatar:
+    small:
+      sizeType: 1
+      height: 50
+      width: 50
+    normal:
+      sizeType: 2
+      height: 200
+      width: 200
+    large:
+      sizeType: 3
+      height: 500
+      width: 500
+  tempFolder: neptune_files
+  avatarExtensionName: png
