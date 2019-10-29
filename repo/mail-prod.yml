@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   rabbitmq:
-    host: serverhost
+    host: 192.168.31.27
     port: 5672
     username: scott
     password: 12345678

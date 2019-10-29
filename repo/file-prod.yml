@@ -6,7 +6,7 @@ spring:
       max-file-size: 20MB
       max-request-size: 50MB
   rabbitmq:
-    host: serverhost
+    host: 192.168.31.27
     port: 5672
     username: scott
     password: 12345678
@@ -14,7 +14,7 @@ spring:
     sampler:
       probability: 0
 minio:
-  endpoint: http://serverhost:9000
+  endpoint: http://192.168.31.27:9000
   access-key: scott
   secret-key: 12345678
   bucket: neptune-blog
