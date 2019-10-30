@@ -43,7 +43,7 @@ folders:
   postImageSm: /post/sm
   postImageOrigin: /post/origin
 file:
-  avatar:
+  avatars:
     small:
       sizeType: 1
       height: 50
