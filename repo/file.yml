@@ -6,7 +6,7 @@ feign:
   hystrix:
     enabled: true
 file:
-  tempFolder: neptune_files
+  tempFolder: /Users/scott/Data/neptune_files
   avatar:
     extensionName: png
     sizes:
