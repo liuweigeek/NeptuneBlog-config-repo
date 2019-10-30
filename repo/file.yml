@@ -5,3 +5,20 @@ spring:
 feign:
   hystrix:
     enabled: true
+file:
+  tempFolder: neptune_files
+  avatar:
+    extensionName: png
+    sizes:
+      -
+        sizeType: 1
+        height: 50
+        width: 50
+      -
+        sizeType: 2
+        height: 200
+        width: 200
+      -
+        sizeType: 3
+        height: 500
+        width: 500
