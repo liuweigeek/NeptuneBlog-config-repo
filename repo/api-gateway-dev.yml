@@ -39,13 +39,15 @@ hystrix:
     default:
       execution:
         isolation:
-          strategy: SEMAPHORE
+#          strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 120000
   shareSecurityContext: true
 ribbon:
   ReadTimeout: 30000
   ConnectTimeout: 30000
+  eager-load:
+    enabled: true
 logging:
   level:
     org.springframework.cloud.openfeign: debug
