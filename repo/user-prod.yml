@@ -21,7 +21,7 @@ spring:
     timeout: 20000
     jedis:
       pool:
-        max-active: 0
+        max-active: 8
         max-wait: -1
         max-idle: 8
         min-idle: 0
@@ -40,10 +40,11 @@ hystrix:
         isolation:
           strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 20000
+            timeoutInMilliseconds: 80000
   shareSecurityContext: true
 ribbon:
   ReadTimeout: 20000
+  ConnectTimeout: 20000
   eager-load:
     enabled: true
     clients: post, file

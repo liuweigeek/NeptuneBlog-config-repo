@@ -29,10 +29,11 @@ hystrix:
         isolation:
           strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 20000
+            timeoutInMilliseconds: 80000
   shareSecurityContext: true
 ribbon:
   ReadTimeout: 20000
+  ConnectTimeout: 20000
   eager-load:
     enabled: true
     clients: user, file
