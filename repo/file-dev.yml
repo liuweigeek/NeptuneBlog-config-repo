@@ -48,15 +48,15 @@ folders:
   postImageOrigin: /post/origin
 file:
   avatars:
-    small:
+    -
       sizeType: 1
       height: 50
       width: 50
-    normal:
+    -
       sizeType: 2
       height: 200
       width: 200
-    large:
+    -
       sizeType: 3
       height: 500
       width: 500
