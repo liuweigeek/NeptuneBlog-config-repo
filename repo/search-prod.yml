@@ -23,7 +23,7 @@ ribbon:
   ConnectTimeout: 20000
   eager-load:
     enabled: true
-    clients: post, file
+    clients: user, post, file
 logging:
   level:
     org.springframework.cloud.openfeign: error
