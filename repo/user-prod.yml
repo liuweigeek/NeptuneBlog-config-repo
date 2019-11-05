@@ -56,3 +56,4 @@ logging:
   level:
     org.springframework.cloud.openfeign: error
     org.springframework.cloud.bus: error
+label: Created by Scott Lau, Design For the world
