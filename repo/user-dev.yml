@@ -60,4 +60,4 @@ logging:
   level:
     org.springframework.cloud.openfeign: debug
     org.springframework.cloud.bus: debug
-label: Created by Scott Lau, Design For Human...
+label: Created by Scott Lau, Design For Human.
