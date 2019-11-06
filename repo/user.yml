@@ -20,4 +20,4 @@ mybatis-plus:
     map-underscore-to-camel-case: false
     cache-enabled: false
   pageSize: 30
-label: Design by Scott Lau.
+label: One more thing.
