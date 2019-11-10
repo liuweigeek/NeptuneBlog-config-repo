@@ -37,6 +37,8 @@ logging:
   level:
     org.springframework.cloud.openfeign: error
     org.springframework.cloud.bus: error
+file:
+  tempFolder: /neptune_files
 folders:
   userAvatarSm: /userAvatar/sm
   userAvatarMd: /userAvatar/md

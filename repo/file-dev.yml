@@ -41,6 +41,8 @@ logging:
   level:
     org.springframework.cloud.openfeign: debug
     org.springframework.cloud.bus: debug
+file:
+  tempFolder: /Users/scott/Data/neptune_files
 folders:
   userAvatarSm: /userAvatar/sm
   userAvatarMd: /userAvatar/md
