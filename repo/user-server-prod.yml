@@ -7,7 +7,7 @@ spring:
       max-request-size: 50MB
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://192.168.31.27:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://serverhost:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
     username: scott
     password: 12345678
     hikari:
@@ -19,7 +19,7 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
   redis:
-    host: 192.168.31.27
+    host: serverhost
     port: 6379
     database: 0
     timeout: 20000
@@ -30,7 +30,7 @@ spring:
         max-idle: 8
         min-idle: 0
   rabbitmq:
-    host: 192.168.31.27
+    host: serverhost
     port: 5672
     username: scott
     password: 12345678
