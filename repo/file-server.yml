@@ -1,4 +1,6 @@
 spring:
+  messages:
+    basename: i18n/messages
   jackson:
     serialization:
       FAIL_ON_EMPTY_BEANS: false
