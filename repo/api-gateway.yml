@@ -5,6 +5,8 @@ zuul:
   routes:
     user-server: /user/**
     post-server: /post/**
+    search-server: /search/**
     file-server: /file/**
+    mail-server: /mail/**
 loginFilter:
   ignoreUris: /user/user/login, /user/user/register
