@@ -32,3 +32,4 @@ logging:
   level:
     org.springframework.cloud.openfeign: debug
     org.springframework.cloud.bus: debug
+    com.scott.neptune: debug
