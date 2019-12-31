@@ -6,10 +6,10 @@ spring:
       FAIL_ON_EMPTY_BEANS: false
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
-  data:
-    redis:
-      repositories:
-        enabled: false
+#  data:
+#    redis:
+#      repositories:
+#        enabled: false
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml,mapper/*.xml
   type-aliases-package: com.scott.neptune
@@ -26,10 +26,3 @@ mybatis-plus:
 feign:
   hystrix:
     enabled: true
-
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
-  data:
-    redis:
-      repositories:
-        enabled: false
