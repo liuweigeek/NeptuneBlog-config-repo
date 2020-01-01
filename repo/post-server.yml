@@ -4,8 +4,6 @@ spring:
   jackson:
     serialization:
       FAIL_ON_EMPTY_BEANS: false
-  session:
-    store-type: redis
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml,mapper/*.xml
   type-aliases-package: com.scott.neptune

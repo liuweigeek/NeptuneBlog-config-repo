@@ -1,8 +1,6 @@
 spring:
   messages:
     basename: i18n/messages
-  session:
-    store-type: redis
 zuul:
   routes:
     user-server: /user/**
