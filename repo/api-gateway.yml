@@ -2,6 +2,7 @@ spring:
   messages:
     basename: i18n/messages
 zuul:
+  SendErrorFilter.error.disable: true
   routes:
     user-server: /user/**
     post-server: /post/**
