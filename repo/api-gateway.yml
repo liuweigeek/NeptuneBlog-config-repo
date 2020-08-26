@@ -4,10 +4,8 @@ spring:
 zuul:
   SendErrorFilter.error.disable: true
   routes:
+    -server: /auth/**
     user-server: /user/**
-    post-server: /post/**
+    tweet-server: /tweet/**
     search-server: /search/**
-    file-server: /file/**
     mail-server: /mail/**
-loginFilter:
-  ignoreUris: /user/user/login, /user/user/register

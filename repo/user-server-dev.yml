@@ -18,6 +18,15 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+    properties:
+      hibernate:
+        format_sql: true
   redis:
     host: localhost
     port: 6379

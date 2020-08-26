@@ -53,8 +53,6 @@ logging:
     org.springframework.cloud.openfeign: debug
     org.springframework.cloud.bus: debug
     com.scott.neptune: debug
-loginFilter:
-  ignoreUris: /user/user/login, /user/user/register
 management:
   endpoints:
     web:

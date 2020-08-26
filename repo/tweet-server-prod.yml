@@ -1,5 +1,5 @@
 server:
-  port: 8765
+  port: 8080
 spring:
   servlet:
     multipart:
@@ -7,7 +7,7 @@ spring:
       max-request-size: 50MB
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://serverhost:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
     username: scott
     password: 12345678
     hikari:
@@ -18,18 +18,21 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
+  jpa:
+    generate-ddl: false
+    show-sql: false
+    open-in-view: true
+    properties:
+      hibernate:
+        format_sql: true
   rabbitmq:
-    host: localhost
+    host: serverhost
     port: 5672
     username: scott
     password: 12345678
   sleuth:
     sampler:
-      probability: 1.0
-  zipkin:
-    base-url: http://localhost:9411/
-    sender:
-      type: web
+      probability: 0
 hystrix:
   command:
     default:
@@ -37,16 +40,16 @@ hystrix:
         isolation:
           strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 120000
+            timeoutInMilliseconds: 80000
   shareSecurityContext: true
 ribbon:
-  ReadTimeout: 30000
-  ConnectTimeout: 30000
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
   eager-load:
     enabled: true
     clients: user, file
 logging:
   level:
-    org.springframework.cloud.openfeign: debug
-    org.springframework.cloud.bus: debug
-    com.scott.neptune: debug
+    org.springframework.cloud.openfeign: error
+    org.springframework.cloud.bus: error
+    com.scott.neptune: error
