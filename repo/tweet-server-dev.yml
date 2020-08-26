@@ -53,7 +53,7 @@ ribbon:
   ConnectTimeout: 30000
   eager-load:
     enabled: true
-    clients: user, file
+    clients: user
 logging:
   level:
     org.springframework.cloud.openfeign: debug
