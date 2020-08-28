@@ -32,6 +32,7 @@ spring:
     port: 5672
     username: scott
     password: 12345678
+    virtual-host: /
   sleuth:
     sampler:
       probability: 1.0
@@ -59,3 +60,8 @@ logging:
     org.springframework.cloud.openfeign: debug
     org.springframework.cloud.bus: debug
     com.scott.neptune: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

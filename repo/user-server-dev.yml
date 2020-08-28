@@ -43,6 +43,7 @@ spring:
     port: 5672
     username: scott
     password: 12345678
+    virtual-host: /
   sleuth:
     sampler:
       probability: 1.0
@@ -79,3 +80,8 @@ neptune:
       bucket: neptune-blog
   file:
     tempFolder: /Users/scott/Data/neptune_files
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
