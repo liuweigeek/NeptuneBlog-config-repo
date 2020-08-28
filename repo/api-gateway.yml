@@ -4,7 +4,7 @@ spring:
 zuul:
   SendErrorFilter.error.disable: true
   routes:
-    -server: /auth/**
+    authenticate-server: /auth/**
     user-server: /user/**
     tweet-server: /tweet/**
     search-server: /search/**
