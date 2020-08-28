@@ -64,3 +64,12 @@ logging:
     org.springframework.cloud.openfeign: error
     org.springframework.cloud.bus: error
     com.scott.neptune: error
+neptune:
+  oss:
+    minio:
+      endpoint: http://serverhost:9000
+      accessKey: scott
+      secretKey: 12345678
+      bucket: neptune-blog
+  file:
+    tempFolder: /Users/scott/Data/neptune_files
