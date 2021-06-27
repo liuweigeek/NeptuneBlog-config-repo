@@ -1,9 +1,31 @@
 spring:
+  profiles:
+    active: dev
+  application:
+    name: tweet-server
   messages:
     basename: i18n/messages
-  jackson:
-    serialization:
-      FAIL_ON_EMPTY_BEANS: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  cloud:
+    config:
+      discovery:
+        enabled: false
+        service-id: config-server
+      override-none: false
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+eureka:
+  instance:
+    prefer-ip-address: true
 feign:
   hystrix:
     enabled: true
+jwt:
+  header: authorization
+  headerPrefix: Bearer
+  secret: 6AJvUN7UaP0sqkT0
+  expiration: 604800

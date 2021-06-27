@@ -1,9 +1,47 @@
 spring:
+  profiles:
+    active: dev
+  application:
+    name: user-server
   messages:
     basename: i18n/messages
-  jackson:
-    serialization:
-      FAIL_ON_EMPTY_BEANS: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  cloud:
+    config:
+      discovery:
+        enabled: false
+        service-id: config-server
+      override-none: false
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+eureka:
+  instance:
+    prefer-ip-address: true
 feign:
   hystrix:
     enabled: true
+jwt:
+  header: authorization
+  headerPrefix: Bearer
+  secret: 6AJvUN7UaP0sqkT0
+  expiration: 604800
+neptune:
+  user:
+    avatar:
+      extension: png
+      small:
+        name: small
+        width: 60
+        height: 60
+      medium:
+        name: medium
+        width: 200
+        height: 200
+      large:
+        name: large
+        width: 500
+        height: 500

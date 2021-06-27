@@ -1,5 +1,9 @@
 server:
   port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
 spring:
   servlet:
     multipart:
@@ -7,8 +11,8 @@ spring:
       max-request-size: 50MB
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://serverhost:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
-    username: scott
+    url: jdbc:mysql://SERVER_HOST:3306/db_neptune_blog?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
     password: 12345678
     hikari:
       poolName: Hikari
@@ -18,6 +22,10 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
+      idle-timeout: 300000
+      max-lifetime: 600000
+      minimum-idle: 5
+      maximum-pool-size: 30
   jpa:
     generate-ddl: false
     show-sql: false
@@ -25,15 +33,27 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  redis:
+    host: SERVER_HOST
+    port: 6379
+    database: 0
+    timeout: 20000
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
   rabbitmq:
-    host: serverhost
+    host: SERVER_HOST
     port: 5672
-    username: scott
+    username: root
     password: 12345678
     virtual-host: /
   sleuth:
-    sampler:
-      probability: 0
+    enabled: false
+  zipkin:
+    enabled: false
 hystrix:
   command:
     default:
@@ -48,9 +68,18 @@ ribbon:
   ConnectTimeout: 20000
   eager-load:
     enabled: true
-    clients: user
+    clients: user-server
 logging:
   level:
     org.springframework.cloud.openfeign: error
     org.springframework.cloud.bus: error
     com.scott.neptune: error
+neptune:
+  oss:
+    minio:
+      endpoint: http://SERVER_HOST:9000
+      accessKey: root
+      secretKey: 12345678
+      bucket: neptune-blog
+  file:
+    tempFolder: /Users/scott/Data/neptune_files/tweet
