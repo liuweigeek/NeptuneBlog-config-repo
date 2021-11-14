@@ -6,7 +6,7 @@ eureka:
       defaultZone: ${EUREKA_SERVER_ADDRESSES}
 spring:
   rabbitmq:
-    host: ${SERVER_HOST}
+    host: rabbitmq-service
     port: 5672
     username: root
     password: 12345678
